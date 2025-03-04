@@ -1,56 +1,108 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twara Joshi</title>
+  <title>Twara Joshi - Profile</title>
   <style>
     * {
-      margin: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
     }
 
     .image-container {
-      width: 100%;        
-      height: 200px;
-      display: flex;     
+      width: 100%;
+      height: 300px;
+      position: relative;
+      display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .title-image {
-      width: 100%; 
-      height: 200px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .profile-image {
-      position: absolute;	
-      width: 70px;
-      height: 70px;	
+      position: absolute;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 4px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
     .profile-image:hover {
-      animation: scale 1s 1;
-      border: 4px solid red;
+      transform: scale(1.1);
+      border-color: #ff6347;
     }
 
-    /* Default state for small device message */
-    .smallDevice {      display: none;     }
+    .profile-details {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-details h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .profile-details p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #ff6347;
+    }
+
+    .smallDevice {
+      display: none;
+    }
 
     @media only screen and (max-width: 500px) {
-      .smallDevice { 
-        display: block; color: red;
+      .smallDevice {
+        display: block;
+        color: red;
+        text-align: center;
+        font-size: 1.2rem;
       }
-    }
-
-    @keyframes scale {
-      0% {
-        width: 70px; height: 70px;
+      .profile-image {
+        width: 100px;
+        height: 100px;
       }
-      50% {
-        width: 80px;  height: 80px;
+      .profile-details h1 {
+        font-size: 2rem;
       }
-      100% {
-        width: 70px; height: 70px;
+      .profile-details p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -58,8 +110,21 @@
 <body>
   <div class="image-container">
     <img src="https://wallpapers.com/images/hd/nature-snow-mountain-ridges-omceaovitek4goix.jpg" class="title-image">
-    <img src="./twara.jpg" class="profile-image">
+    <img src="https://via.placeholder.com/150" class="profile-image" alt="Twara Joshi">
   </div>
+
+  <div class="profile-details">
+    <h1>Twara Joshi</h1>
+    <p>Web Developer | Designer | Passionate Learner</p>
+    <p>Hi! I'm Twara, a passionate web developer and designer. I love creating beautiful and interactive websites. I'm always learning new technologies to enhance my skills and bring my ideas to life. Let’s connect and collaborate!</p>
+  </div>
+
+  <div class="contact-info">
+    <a href="https://github.com/TwaraJoshi" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/twarajoshi" target="_blank">LinkedIn</a>
+    <a href="mailto:twara@example.com">Email</a>
+  </div>
+
   <div class="smallDevice">This is a Small Device</div>
 </body>
 </html>
