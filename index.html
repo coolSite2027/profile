@@ -13,8 +13,9 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
-      background-color: #f4f4f9;
+      background-color: #f0f4f8;
       color: #333;
+      text-align: center;
     }
 
     .image-container {
@@ -40,7 +41,7 @@
       border-radius: 50%;
       border: 4px solid white;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .profile-image:hover {
@@ -49,26 +50,40 @@
     }
 
     .profile-details {
-      text-align: center;
-      padding: 20px;
+      padding: 30px;
+      background-color: #ffffff;
+      margin-top: -50px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 1000px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .profile-details h1 {
       font-size: 2.5rem;
       color: #333;
       margin-bottom: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .profile-details p {
       font-size: 1.2rem;
       color: #555;
       margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .profile-details .highlight {
+      color: #ff6347;
+      font-weight: bold;
     }
 
     .contact-info {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       margin-bottom: 30px;
     }
 
@@ -76,11 +91,37 @@
       text-decoration: none;
       font-size: 1.2rem;
       color: #007bff;
-      transition: color 0.3s ease;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .contact-info a:hover {
-      color: #ff6347;
+      background-color: #ff6347;
+      color: #fff;
+    }
+
+    .details-section {
+      margin-top: 30px;
+      text-align: left;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .details-section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    .details-section p {
+      margin-bottom: 10px;
+    }
+
+    .details-section span {
+      font-weight: bold;
+      color: #333;
     }
 
     .smallDevice {
@@ -94,13 +135,16 @@
         text-align: center;
         font-size: 1.2rem;
       }
+
       .profile-image {
         width: 100px;
         height: 100px;
       }
+
       .profile-details h1 {
         font-size: 2rem;
       }
+
       .profile-details p {
         font-size: 1rem;
       }
@@ -108,23 +152,47 @@
   </style>
 </head>
 <body>
+
+  <!-- Header Image and Profile Picture -->
   <div class="image-container">
     <img src="https://wallpapers.com/images/hd/nature-snow-mountain-ridges-omceaovitek4goix.jpg" class="title-image">
     <img src="./twara.jpg" class="profile-image" alt="Twara Joshi">
   </div>
 
+  <!-- Profile Details -->
   <div class="profile-details">
     <h1>Twara Joshi</h1>
     <p>Web Developer | Designer | Passionate Learner</p>
-    <p>Hi! I'm Twara, a passionate web developer and designer. I love creating beautiful and interactive websites. I'm always learning new technologies to enhance my skills and bring my ideas to life. Let’s connect and collaborate!</p>
+    <p>Hello! I'm Twara, a passionate web developer and designer. I create beautiful and interactive websites. Always eager to learn new things and improve my skills!</p>
   </div>
 
+  <!-- Contact Information -->
   <div class="contact-info">
     <a href="https://github.com/TwaraJoshi" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/twarajoshi" target="_blank">LinkedIn</a>
     <a href="mailto:twara@example.com">Email</a>
   </div>
 
+  <!-- Address, Hobbies, and Mobile -->
+  <div class="details-section">
+    <h2>Contact Details</h2>
+    <p><span>Address:</span> 1234, Web Developer Lane, Tech City, India</p>
+    <p><span>Mobile:</span> +91 123 456 7890</p>
+    <p><span>Email:</span> <a href="mailto:twara@example.com" class="highlight">twara@example.com</a></p>
+  </div>
+
+  <div class="details-section">
+    <h2>Hobbies</h2>
+    <p>I love coding, exploring new tech, and experimenting with design. In my free time, I enjoy:</p>
+    <ul>
+      <li>Traveling</li>
+      <li>Photography</li>
+      <li>Reading tech blogs and books</li>
+      <li>Playing video games</li>
+    </ul>
+  </div>
+
   <div class="smallDevice">This is a Small Device</div>
+
 </body>
 </html>
